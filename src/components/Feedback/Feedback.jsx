@@ -1,17 +1,19 @@
 import React from "react";
-import { useState } from "react";
+import s from "./Feedback.module.css";
 
 const Feedback = ({ feedback, totalFeedback }) => {
   const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
   return (
     <div>
-      <ul>
-        <li>Good : {feedback.good}</li>
-        <li>Neutral : {feedback.neutral}</li>
-        <li>Bad : {feedback.bad}</li>
-        <li>Tottal : {totalFeedback}</li>
-        <li>Positive : {positiveFeedback}%</li>
-      </ul>
+      <div className={s.wrapper}>
+        <ul className={s.feedbackList}>
+          <li className={s.feedbackItem}>Good : {feedback.good}</li>
+          <li className={s.feedbackItem}>Neutral : {feedback.neutral}</li>
+          <li className={s.feedbackItem}>Bad : {feedback.bad}</li>
+          <li className={s.feedbackItem}>Tottal : {totalFeedback}</li>
+          <li className={s.feedbackItem}>Positive : {positiveFeedback}%</li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,10 @@
+.wrapper {
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+.feedbackList {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
